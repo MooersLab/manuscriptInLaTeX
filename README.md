@@ -50,3 +50,39 @@ The features of the template are as follows:
 After your paper is accepted, you can reformat it to comply with the Journal's style.
 LaTeX template and style files can be found on the Journal's website.
 The Overleaf.com site has a gallery of journal article templates that run on Overleaf.
+
+## Complementary Writing Tools Available at github.com/MooersLab
+
+### Writing Log
+
+See this [site](https://github.com/MooersLab/writingLogTemplate) for a template for a place to think about and track your progress on your writing project.
+
+### Annotated Bibliography
+
+See that [site]() for a template to create an annotated bibliography in LateX. This is a good place to store your notes from your reading of the literature.
+
+### latex-emacs
+
+See this [site](https://github.com/MooersLab/latex-emacs) for a latex-emacs configuration file.
+This configuration allows use to run Emacs with LaTeX in isolation of your main configuration.
+
+### snippet-latex-mode
+
+See this [site](https://github.com/MooersLab/snippet-latex-mode) for a collection of snippets for latex-mode in Emacs.
+These extend the default set.
+
+### emacs-quizzes
+
+Improve your recall of Emacs commands with a few minutes  a day thanks spaced repetition. 
+The [site](https://github.com/MooersLab/qemacs) has a set of fill in the blank quizzes.
+
+### LaTeX in Emacs
+
+Learn about how to use [LaTeX in Emacs](https://github.com/MooersLab/BerlinEmacsAugust2022) via a slides that I presented at the Berlin Emacs Meetup 31 August 2022.
+This talk was not recorded.
+
+### GhostText
+
+Edit text areas in a web browser from your [favorite text editor](https://github.com/MooersLab/DSW22ghosttext).
+The text area can be the opened tex file on Overleaf.
+The corresponding [video](https://mediasite.ouhsc.edu/Mediasite/Channel/python/watch/4da0872f028c4255ae12935655e911321d) is available.
