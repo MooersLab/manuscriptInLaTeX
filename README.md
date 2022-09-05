@@ -64,6 +64,14 @@ See that [site](https://github.com/MooersLab/annotatedBibliography) for a templa
 This is a good place to store your notes from your reading of the literature.
 I store the annotated bibliography in a subfolder in the same folder as all of the files for my writing project.
 
+### Diary for 2022 in LaTeX
+
+[See](https://github.com/MooersLab/diary2022inLaTeX). Can serve many related purposes.
+
+### Diary for 2023 in LaTeX
+
+[See](https://github.com/MooersLab/diary2023inLaTeX). Can serve many related purposes.
+
 ### latex-emacs
 
 See this [site](https://github.com/MooersLab/latex-emacs) for a latex-emacs configuration file.
