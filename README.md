@@ -56,24 +56,27 @@ The Overleaf.com site has a gallery of journal article templates that run on Ove
 ### Writing Log
 
 See this [site](https://github.com/MooersLab/writingLogTemplate) for a template for a place to think about and track your progress on your writing project.
+I store the writing log in the same folder as all of the files for my writing project.
 
 ### Annotated Bibliography
 
-See that [site]() for a template to create an annotated bibliography in LateX. This is a good place to store your notes from your reading of the literature.
+See that [site]() for a template to create an annotated bibliography in LateX. 
+This is a good place to store your notes from your reading of the literature.
+I store the annotated bibliography in a subfolder in the same folder as all of the files for my writing project.
 
 ### latex-emacs
 
 See this [site](https://github.com/MooersLab/latex-emacs) for a latex-emacs configuration file.
-This configuration allows use to run Emacs with LaTeX in isolation of your main configuration.
+This configuration allows you to run Emacs with LaTeX in isolation of your main configuration.
 
 ### snippet-latex-mode
 
-See this [site](https://github.com/MooersLab/snippet-latex-mode) for a collection of snippets for latex-mode in Emacs.
+See this [site](https://github.com/MooersLab/snippet-latex-mode) for a collection of yasnippet snippets for latex-mode in Emacs.
 These extend the default set.
 
 ### emacs-quizzes
 
-Improve your recall of Emacs commands with a few minutes  a day thanks spaced repetition. 
+Improve your recall of Emacs commands in a few minutes a day thanks spaced repetition. 
 The [site](https://github.com/MooersLab/qemacs) has a set of fill in the blank quizzes.
 
 ### LaTeX in Emacs
@@ -85,4 +88,4 @@ This talk was not recorded.
 
 Edit text areas in a web browser from your [favorite text editor](https://github.com/MooersLab/DSW22ghosttext).
 The text area can be the opened tex file on Overleaf.
-The corresponding [video](https://mediasite.ouhsc.edu/Mediasite/Channel/python/watch/4da0872f028c4255ae12935655e911321d) is available.
+This talk was recorded: See the corresponding [video](https://mediasite.ouhsc.edu/Mediasite/Channel/python/watch/4da0872f028c4255ae12935655e911321d).
