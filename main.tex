@@ -7,6 +7,8 @@
 \usepackage{datetime2}
 \usepackage{amsmath,amssymb,amsfonts}
 % Tweak the margin width to suit by changing the width of the text area.
+% 6 in would be a good choice for local editing.
+% 6.5 would be good for submission.
 %\usepackage[letterpaper, total={7in, 9in}]{geometry}
 \usepackage[letterpaper, total={6.75in, 9in}]{geometry}
 \usepackage[utf8]{inputenc}
@@ -15,16 +17,15 @@
 \usepackage{authblk}
 \usepackage[labelfont=bf]{caption}
 \DeclareCaptionType{equ}[][]
-
-% cite package, to clean up citations in the main text. Do not remove.
+% Use the cite package to clean up citations in the main text.
 \usepackage{cite}
-%page numbers upper right
+%Print page numbers in the upper right corner rather than the bottom center.
 \pagestyle{myheadings}
 
+% Create a code float environment to enclosed minted environments.
 \newenvironment{code}{\captionsetup{type=listing}}{}
 
-
-% Approximate Arial font. To return to sans serif, uncomment the next two lines.
+% Approximate Arial font. To save ink by returning to a sans serif font, comment the next two lines.
 \usepackage{helvet}
 \renewcommand{\familydefault}{\sfdefault}
 
@@ -80,54 +81,53 @@ I enclosed the abstract in the \emph{singlespace} environment.
 % That is a separate class manuscript.
 
 The first paragraph defines the scope of the problem and why it is important.
-It might cite several key contributions in the area \cite{Newman2010TheC6WebToolAResourceForTheRationalSelectionOfCrystallizationConditions, Luft2007EfficientOptimizationOfCrystallizationConditionsByManipulationOfDropVolumeRatioAndTemperature}.
-I like to use the author-year format to make it easier for the reviewers, irregardless of the required format.
-Numbered formats are harder to look-up.
+It might cite several key contributions in the area \cite{Acharya2011SolvingProbabilisticProgrammingProblemsInvolvingMultiChoiceParameters, Luft2007EfficientOptimizationOfCrystallizationConditionsByManipulationOfDropVolumeRatioAndTemperature}.
+I like to use the author-year format to make it easier for reviewers, regardless of the required format.
+Numbered formats are harder to lookup.
 The last sentence should set up the first sentence of the next paragraph by hinting at possible approaches to the question or problem at hand.
 
 The second paragraph starts with the central hypothesis that addressed the question or problem alluded to in paragraph one.
 This is followed by a summary of our approach.
 A sentence or two may be expended on a summary of what we found.
-The last sentence describes the audience of the paper.
+The last sentence describes the audience of the article.
 
 
 
 \section*{Materials and Methods}
 
-This section is a series of subsections that may or may not in chronological order.
-This section is often placed after the Discussion.
+This section is a series of subsections that may or may not be in chronological order.
+This section is often placed after the Discussion section.
 
 \section*{Results}
 
-ParagraphOne: Map of the Results section. 
+Paragraph One: Map of the Results section. 
 This introductory paragraph is usually missing, but no editor has ever asked me to delete it.
 This paragraph tells the reader in a little more detail than the Introduction what they can expect to see and the order in which the results will be presented.
 
 
 \subsection*{Most important result}
-Cover results in declining importance relative to how they address the hypothesis. 
+Cover the results in decreasing importance relative to the degree to which they address the central hypothesis of the paper. 
 If they have no relevance, save them from another paper.
 Chronological order is usually a poor choice.
 End each paragraph with a conclusion.
 
 Refer to tables and figures via their labels.
-For example, see hot figure (Fig. \ref{fig:labelA}).
+For example, see the hot figure (Fig. \ref{fig:labelA}).
 The numbering of the figures is handled automatically, so you can reorganize them without having to renumber them.
 
 \subsection*{Second most important result}
 
 See hot numbers in (Table \ref{tab:first}).
-The numbering of the tables is handled automatically so you can reorganize them without having to renumber them.
+The numbering of the tables is handled automatically, so you can reorganize them without having to renumber them.
 
 
 \subsection*{Third most important result}
 
-In-line equations are placed between dollar signs:  $y = mx + b$.
-Display equations can be placed between double dollar signs or inside an equation environment.
+Inline equations are placed between dollar signs: $y = mx + b$.
+Display equations are placed between double-dollar signs or inside an equation environment.
 These environments are not floats.
-You can define a float and place them inside the float to enable the use of captions as I did below.
+You can define a custom float to enclose them and place them inside the float to enable the use of captions as I did below.
 The \emph{equ} environment is defined in the preamble.
-
 
 
 \begin{equ}[htp]  
@@ -140,7 +140,7 @@ i \hbar \frac{d}{d t}|\Psi(t)\rangle=\hat{H}|\Psi(t)\rangle
 \subsection*{Fourth most important result}
 
 Code listings also have to be enclosed inside floats to have captions.
-The caption can be place above or below the code listng.
+The caption can be placed above or below the code listing.
 
 These environments need to be enclosed in the singlespace environment to retain single-line spacing in the code block.
 
@@ -181,23 +181,25 @@ def midpoint(ptA, ptB):
 
 \subsection*{Sixth most important result}
 
-There could be up to four more subsections in a meaty paper.
+There could be up to four more subsections in a results-heavy paper.
 
 There are usually four graphics and two tables in a minimal publishable unit.
 This is a weak guideline because of the trend to use multipanel figures.
-I have seen figures with ten or more panels.
-Is it one figure or ten?
+I have seen figures with ten panels.
+Is this one figure or ten?
 
-Delete all results that do not have a bearing on the central hypothesis or are less important.
+Delete all results that do not address the central hypothesis or are less important.
 
 \section*{Discussion}
 How our results relate to the results of others.
-(Avoid Results and Discussion sections: They do not work well. This is research paper, not a seminar).
+(Avoid using merged Results and Discussion sections.
+They rarely work well. 
+This is a research paper, not a seminar).
 
 Paragraph One: Map of the Discussion section. 
-This paragraph is usually missing, but no editor has ever asked me to delete it.
+This paragraph is usually missing, but it can orient the reader.
 
-Paragraphs two and beyond must end with a conclusion.
+Paragraphs two and beyond must end with conclusions in their last sentences.
 The conclusion can be a call to do more research.
 
 Lay out the topics in declining importance.
@@ -210,7 +212,7 @@ Delete the paragraph with no bearing on the central hypothesis.
 Acknowledgments of core facilities and grant support. 
 Double-check the grant numbers.
 It is easy to make typos in these.
-These acknowledgments are critical for the continued support of grants.
+These acknowledgments are critical to the continued support of grants.
 
 
 \bibliography{global}
@@ -219,11 +221,11 @@ These acknowledgments are critical for the continued support of grants.
 \listoftables
 Tables should be one per page. 
 
-The manual assembly of Tables is a challenge for beginners. 
+The manual assembly of tables is a challenge for beginners. 
 Pandas, R, and the Python package latextable \url{https://github.com/JAEarly/latextable} can write out LaTeX tables. 
 Tables are easy to assemble in org-mode in Emacs and exported to LaTeX. 
 Markdown tables can be exported to LaTeX with pandoc. 
-There are on-line tools to aid the assembly of LaTeX tables: \url{https://www.tablesgenerator.com/}.
+There are online tools to aid in the assembly of LaTeX tables: \url{https://www.tablesgenerator.com/}.
 
 The first table below was made with vanilla LaTeX.
 The second table was made with the booktabs package: The horizontal rules are of different weights in the latter table.
@@ -252,7 +254,7 @@ It is also possible to have tables oriented in the landscape orientation via the
 
 \begin{table}[htp]
   \centering
-  \caption{\label{tab:first} My summary statistics made with the booktabs package. Dummy data.}
+  \caption{\label{tab:second} My summary statistics made with the booktabs package. Dummy data.}
 \begin{tabular}{lllll}\toprule % l c and r control the alignment f the text in the table fields
  Parameter & Group A & Group B & Group C &  Group D \\ \midrule
  Length ($\mu$m) & 100 & 150 & 175 &  250\\
