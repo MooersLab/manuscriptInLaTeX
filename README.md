@@ -51,7 +51,7 @@ After your paper is accepted, you can reformat it to comply with the Journal's s
 LaTeX template and style files can be found on the Journal's website.
 The Overleaf.com site has a gallery of journal article templates that run on Overleaf.
 
-## Complementary Writing Tools Available at github.com/MooersLab
+## Complementary writing tools available at github.com/MooersLab
 
 ### Writing Log
 
