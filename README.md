@@ -60,9 +60,14 @@ I store the writing log in the same folder as all of the files for my writing pr
 
 ### Annotated Bibliography
 
-See that [site](https://github.com/MooersLab/annotatedBibliography) for a template to create an annotated bibliography in LateX. 
+See this [site](https://github.com/MooersLab/annotatedBibliography) for a template to create an annotated bibliography in LateX. 
 This is a good place to store your notes from your reading of the literature.
 I store the annotated bibliography in a subfolder in the same folder as all of the files for my writing project.
+
+### Slideshow Template
+
+See this [site](https://github.com/MooersLab/slideshowTemplateLaTeX) for a template to create a slideshow to advertise your manuscript.
+
 
 ### Diary for 2022 in LaTeX
 
