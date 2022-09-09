@@ -28,6 +28,18 @@ The template includes examples of the following elements:
 
 Delete the boilerplate that you do not need and fill out the sections with your amazing results and submit.
 
+### Note for org-mode users
+
+Wouter Spekkink has written a detailed [blog post](http://www.wouterspekkink.org/academia/writing/tool/doom-emacs/2021/02/27/writing-academic-papers-with-org-mode.html) about writing an academic article in org-mode and then exporting it to LaTeX.
+Org-mode users like to be able to fold sections.
+You can do that to LaTeX section in Overleaf.
+He claims that LaTeX's markup is distracting.
+He is right about that when it comes to tables, but I think that the LaTeX markup is minimal for the vast majority of the document.
+He is also right about the exporting from org through LaTeX to PDF being seemless because it requires one command.
+Although in AUCTeX, this can be painless too.
+Nonetheless, I will develop a org variant for org-mode users.
+
+
 ## Features
 
 The features of the template are as follows:
@@ -51,7 +63,7 @@ After your paper is accepted, you can reformat it to comply with the Journal's s
 LaTeX template and style files can be found on the Journal's website.
 The Overleaf.com site has a gallery of journal article templates that run on Overleaf.
 
-## Complementary Writing Tools Available at github.com/MooersLab
+## Complementary writing tools available at github.com/MooersLab
 
 ### Writing Log
 
@@ -60,9 +72,14 @@ I store the writing log in the same folder as all of the files for my writing pr
 
 ### Annotated Bibliography
 
-See that [site](https://github.com/MooersLab/annotatedBibliography) for a template to create an annotated bibliography in LateX. 
+See this [site](https://github.com/MooersLab/annotatedBibliography) for a template to create an annotated bibliography in LateX. 
 This is a good place to store your notes from your reading of the literature.
 I store the annotated bibliography in a subfolder in the same folder as all of the files for my writing project.
+
+### Slideshow Template
+
+See this [site](https://github.com/MooersLab/slideshowTemplateLaTeX) for a template to create a slideshow to advertise your manuscript.
+
 
 ### Diary for 2022 in LaTeX
 
