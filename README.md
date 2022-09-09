@@ -28,6 +28,18 @@ The template includes examples of the following elements:
 
 Delete the boilerplate that you do not need and fill out the sections with your amazing results and submit.
 
+### Note for org-mode users
+
+Wouter Spekkink has written a detailed [blog post](http://www.wouterspekkink.org/academia/writing/tool/doom-emacs/2021/02/27/writing-academic-papers-with-org-mode.html) about writing an academic article in org-mode and then exporting it to LaTeX.
+Org-mode users like to be able to fold sections.
+You can do that to LaTeX section in Overleaf.
+He claims that LaTeX's markup is distracting.
+He is right about that when it comes to tables, but I think that the LaTeX markup is minimal for the vast majority of the document.
+He is also right about the exporting from org through LaTeX to PDF being seemless because it requires one command.
+Although in AUCTeX, this can be painless too.
+Nonetheless, I will develop a org variant for org-mode users.
+
+
 ## Features
 
 The features of the template are as follows:
