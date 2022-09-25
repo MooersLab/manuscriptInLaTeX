@@ -114,3 +114,8 @@ This talk was not recorded.
 Edit text areas in a web browser from your [favorite text editor](https://github.com/MooersLab/DSW22ghosttext).
 The text area can be the opened tex file on Overleaf.
 This talk was recorded: See the corresponding [video](https://mediasite.ouhsc.edu/Mediasite/Channel/python/watch/4da0872f028c4255ae12935655e911321d).
+
+### The Writer's Law
+
+Some [guidelines](https://github.com/MooersLab/thewriterslaw) to productive writing.
+
