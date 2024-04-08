@@ -123,3 +123,17 @@ This talk was recorded: See the corresponding [video](https://mediasite.ouhsc.ed
 
 Some [guidelines](https://github.com/MooersLab/thewriterslaw) to productive writing.
 
+## Version History
+
+|Version      | Changes                                               | Date            |
+|:-----------:|:-----------------------------------------------------:|:---------------:|
+| Version 0.2 | Added update table to README.md                       | 2024 April 7    |
+
+
+## Sources of Funding
+
+- NIH: R01 CA242845
+- NIH: R01 AI088011
+- NIH: P30 CA225520 (PI: R. Mannel)
+- NIH P20GM103640 and P30GM145423 (PI: A. West)
+
