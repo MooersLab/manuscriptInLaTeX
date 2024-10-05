@@ -142,7 +142,7 @@ Some [guidelines](https://github.com/MooersLab/thewriterslaw) to productive writ
 ## Version History
 
 |Version      | Changes                                                                              | Date            |
-|:-----------:|:------------------------------------------------------------------------------------:|:---------------:|
+|:------------|:-------------------------------------------------------------------------------------|:----------------|
 | Version 0.2 | Added update table to README.md                                                      | 2024 April 7    |
 | Version 0.3 | Updated main.tex to include running titles and support the use of the package minted.| 2024 October 5  |
 
