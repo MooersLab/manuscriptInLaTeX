@@ -15,8 +15,7 @@ You could use a format for that first submission that is easy for reviewers to r
 It should also be simple for you to assemble.
 
 (I know; you could format it for BioArxiv in LaTeX. 
-This step is part of many people's workflows. 
-It is not part of mine yet.)
+This step is part of many people's workflows.)
 
 ## Solution: a generic template for the first submission
 
@@ -30,7 +29,7 @@ The template includes examples of the following elements:
 - code block
 - bibtex file
 
-Delete the boilerplate that you do not need and fill out the sections with your amazing results and submit.
+Delete the boilerplate that you do not need and fill in the sections with your amazing results and submit.
 
 ## Configuration for using LaTeX with AucTex in Emacs
 
