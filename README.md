@@ -20,7 +20,7 @@ This step is part of many people's workflows.)
 ## Solution: a generic template for the first submission
 
 This GitHub repository is for a generic journal article template (main.tex) that I use to prepare my first manuscript submission as a LaTeX document.
-I used one extra file for styling the bibliography, spbasic.bst.
+I used one extra file for styling the bibliography, `spbasic.bst`.
 The template includes examples of the following elements:
 
 - figure
