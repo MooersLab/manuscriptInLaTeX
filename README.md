@@ -105,13 +105,9 @@ I store the annotated bibliography in a subfolder in the same folder as all the 
 See this [site](https://github.com/MooersLab/slideshowTemplateLaTeX) for a template to create a slideshow to advertise your manuscript.
 
 
-### Diary for 2022 in LaTeX
+### Diary for 2024 in LaTeX
 
-[See](https://github.com/MooersLab/diary2022inLaTeX). Can serve many related purposes.
-
-### Diary for 2023 in LaTeX
-
-[See](https://github.com/MooersLab/diary2023inLaTeX). Can serve many related purposes.
+[See](https://github.com/MooersLab/diary2024inLaTeX). Can serve many related purposes.
 
 ### latex-emacs
 
