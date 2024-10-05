@@ -36,7 +36,7 @@ Delete the boilerplate that you do not need and fill out the sections with your 
 
 Add to the init.el file:
 
-```latex
+```elisp
 (setq TeX-command-extra-options "-shell-escape") ; required to enable use of the minted package for syntax highlighing of code.
 
 (use-package auctex
