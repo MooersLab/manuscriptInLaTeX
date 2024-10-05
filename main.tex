@@ -22,6 +22,19 @@
 %Print page numbers in the upper right corner rather than the bottom center.
 \pagestyle{myheadings}
 
+
+%  Added running titles to avoid mixing up paper versions of two or more unstapled manuscripts stored  together.
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+% \fancyhf{}% Clear header/footer
+\fancyhead[C]{%
+  \ifodd\value{page}\relax
+    Generic manuscript template % Odd page header
+  \else
+    Student, ..., and Mooers % Even page header
+  \fi}
+\fancyhead[R]{\thepage}
+
 % Create a code float environment to enclosed minted environments.
 \newenvironment{code}{\captionsetup{type=listing}}{}
 
@@ -55,9 +68,9 @@
 
 \maketitle
 
-
+\pagenumbering{gobble} % remove page number
 \newpage
-
+\pagenumbering{arabic}
 \linenumbers
 
 \begin{singlespace}
@@ -72,7 +85,7 @@ I enclosed the abstract in the \emph{singlespace} environment.
 
 \paragraph{Keywords:} I draft the keywords in the writing document and select the best up to the allowable limit.
 
-% A pox on those who over-use abbreviations! Unfamiliar ones slow-down the reader. Limit them to well-known ones.  
+% A pox on those who over-use abbreviations! Unfamiliar ones slow-down the reader. Limit them to well-known ones.
 \paragraph{Abbreviations:} GUI: graphical user interface, IDE: integrated development environment 
 
 \section*{Introduction}
