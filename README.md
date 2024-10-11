@@ -1,4 +1,4 @@
-![Version](https://img.shields.io/static/v1?label=manuscriptInLaTeX&message=0.1&color=brightcolor)
+![Version](https://img.shields.io/static/v1?label=manuscriptInLaTeX&message=0.7&color=brightcolor)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 
@@ -142,4 +142,17 @@ This talk was recorded: See the corresponding [video](https://mediasite.ouhsc.ed
 ### The Writer's Law
 
 Some [guidelines](https://github.com/MooersLab/thewriterslaw) to productive writing.
+
+
+
+|Version       |Changes                                                                                               |Date                  |
+|:-------------|:-----------------------------------------------------------------------------------------------------|:---------------------|
+| Version 0.7  | Added badges update table.                                                                           | 2024 October 11      |
+
+## Sources of funding
+
+- NIH: R01 CA242845
+- NIH: R01 AI088011
+- NIH: P30 CA225520 (PI: R. Mannel)
+- NIH: P20 GM103640 and P30 GM145423 (PI: A. West)
 
