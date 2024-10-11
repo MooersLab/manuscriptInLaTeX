@@ -32,6 +32,18 @@ The template includes examples of the following elements:
 
 Delete the boilerplate that you do not need and fill out the sections with your amazing results and submit.
 
+## Compiling in terminal
+
+Must use `-shell-escape` when using the minted package.
+
+```bash
+pdflatex -shell-escape main
+bibtex main
+pdflatex -shell-escape main
+pdflatex -shell-escape main
+```
+
+
 ## Configuration for using LaTeX with AucTex in Emacs
 
 Add to the init.el file:
