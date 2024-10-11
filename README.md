@@ -1,154 +1,131 @@
-![Version](https://img.shields.io/static/v1?label=manuscriptInLaTeX&message=0.3&color=brightcolor)
+![Version](https://img.shields.io/static/v1?label=manuscriptInOrg&message=0.7.1&color=brightcolor)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 
-# Generic template in LaTeX for the first submission of an academic manuscript
+# Manuscript template in org-mode for the first submission 
 
-## Tower of First-Submission Babel
+## Background
+The first submission of a research paper for peer review can be in a generic format as a PDF.
+The advantage of a plain generic template is that it can be submitted to many different journals.
 
-A point of perpetual confusion for me is that the availability of style files for LaTeX for various Academic journals implies that you should prepare your first submission using the official template.
-This is not true, and this is much more trouble than it is worth, especially if your manuscript is rejected, as most are.
-Journal  configurations vary widely between journals: It can be much more challenging to reformat a manuscript than it may appear at first sight.
+This is an org-mode variant of the main.tex file in the MooersLab/manuscriptInLaTeX [repo](https://github.com/MooersLab/manuscriptInLaTeX).
+This template is for people who prefer to write research papers in org-mode because they do a lot of their other work in org-mode and do not want to switch to working in LaTeX.
+They would rather spend all day in org-mode; it is that fun to use.
+Org supports easy shuffling and other manipulations of document subtrees, very easy table generation, and literate programming.
+You can also integrate manuscript writing with time management via org-agenda and knowledge management via org-roam more efficiently by staying in org-mode. 
+These features are beyond what is readily possible in LaTeX without using extra packages.
 
-Instead, you only need to submit your first submission as a PDF.
-You could use a format for that first submission that is easy for reviewers to read and edit when printed out.
-It should also be simple for you to assemble.
-
-(I know; you could format it for BioArxiv in LaTeX. 
-This step is part of many people's workflows.)
-
-## Solution: a generic template for the first submission
-
-This GitHub repository is for a generic journal article template (main.tex) that I use to prepare my first manuscript submission as a LaTeX document.
-I used one extra file for styling the bibliography, `spbasic.bst`.
-The template includes examples of the following elements:
-
-- figure
-- tables
-- equations
-- code block
-- bibtex file
-
-Delete the boilerplate that you do not need and fill in the sections with your amazing results and submit.
-
-## Configuration for using LaTeX with AucTex in Emacs
-
-Add to the init.el file:
+If you are already a strong LaTeX user, there is plenty of tweaking of the preamble of this template that you can do to add your favorite packages and settings.
+Org-mode recognizes many LaTeX commands directly.
+LaTeX code can also be utilized inside of code blocks that can be evaluated on the fly.
+See the [org-mode manual](https://orgmode.org/manual/).
 
 ```elisp
-(setq TeX-command-extra-options "-shell-escape") ; required to use the minted package for syntax highlighting of code.
-
-(use-package auctex
-  :ensure t
-  :defer t
-  :hook (LaTeX-mode . (lambda ()
-			(push (list 'output-pdf "Skim")
-			      TeX-view-program-selection))))
+#+name: hello-world
+#+BEGIN_SRC latex
+\LaTeX code
+#+END_SRC
 ```
 
 
-### Note for org-mode users
 
-Wouter Spekkink has written a detailed [blog post](http://www.wouterspekkink.org/academia/writing/tool/doom-emacs/2021/02/27/writing-academic-papers-with-org-mode.html) about writing an academic article in org-mode and then exporting it to LaTeX.
-Org-mode users like to be able to fold sections.
-You can do that to LaTeX sections in Overleaf.
-He claims that LaTeX's markup is distracting.
-He is right about tables in LaTeX, but I think the LaTeX markup is minimal for most of the document.
-It is not much that much more verbose than org-mode for most elements of the document.
-He is also right about seamlessly exporting from org through LaTeX to PDF because it requires one command.
-However, in AUCTeX, this can be painless, too, and is faster than in org-mode.
+## Sample title page
 
-Nonetheless, I have developed an [org variant](https://github.com/MooersLab/manuscriptInOrg) for org-mode users.
-I have changed my perspective on org-mode.
-I now view it as an extended version of LaTeX because all of the features of LaTeX can be used inside org-mode.
+![Screenshot 2024-08-18 at 6 40 00 AM](https://github.com/user-attachments/assets/fbc7cbb8-4711-427b-864d-569178196adb)
 
-## Features
+## Sample second page
 
-The features of the template are as follows:
-
-- A 7 x 9-inch geometry for the active text area to make good paper use.
-- Double-spacing.
-- Line numbers in the main document body.
-- Automated page numbering.
-- Generic Title page formatting with affiliations for multiple authors.
-- Running title and short author list eases keeping track of printed versions when two or more documents have been stored together for editing away from the computer like during air travel.
-- Use a global.bib file rather than bibitems to assemble the bibliography.
-- Use the `booktabs` library for pretty tables even if I must downgrade them on the final submission with the journal's style file.
-- A list of tables is autogenerated.
-- Use the `graphicx` package to import images.
-- Support for including figures in an old-fashioned Figure section rather than embedding them in the text. Hyperlinked labels allow you to navigate to a figure instantly. A list of figures is autogenerated.
-- Support for including tables in a Tables section.
-- Reminders (i.e., remember to spell out the hypothesis in the Introduction) of what should go where in a foldable comment.
-- Support for equation typesetting in a custom environment that supports captions.
-- Support for syntax highlighting of code blocks and using captions for each code block.
-
-After your manuscript is accepted, you can reformat it to comply with the Journal's style.
-LaTeX template and style files can be found on the Journal's website.
-The Overleaf.com site has a gallery of templates for journal articles that run on Overleaf.
-
-## Complementary writing tools available at github.com/MooersLab
-
-### Writing Log in LaTeX
-
-See this [site](https://github.com/MooersLab/writingLogTemplate) for a template to organize your thoughts and track your progress on your writing project.
-I store the writing log in the same folder as all the files for my writing project.
-
-### Annotated Bibliography
-
-See this [site](https://github.com/MooersLab/annotatedBibliography) for a template to create an annotated bibliography in LateX. 
-This is an excellent place to store your notes from reading the literature.
-I store the annotated bibliography in a subfolder in the same folder as all the files for my writing project.
-
-### Slideshow Template
-
-See this [site](https://github.com/MooersLab/slideshowTemplateLaTeX) for a template to create a slideshow to advertise your manuscript.
+![Screenshot 2024-08-22 at 4 00 55 PM](https://github.com/user-attachments/assets/843aa28e-97ee-4a96-b151-1069e725d1c3)
 
 
-### Diary for 2024 in LaTeX
+## Default Features
 
-[See](https://github.com/MooersLab/diary2024inLaTeX). Can serve many related purposes.
+- Line numbers.
+- Block paragraphs. Reset the indent on the line `\setlength{\parindent}{0pt} `  if you indents.
+- No numbering of the sections. This is suppressed in a org-mode setting in the header (i.e., num:\nil). Remove this setting to apply section numbering.
+- Blank lines between paragraphs. This is set by the line `\usepackage{parskip}` in the preamble.
+- Narrow margins to conserve paper in drafts. Edit the line `\usepackage[letterpaper, total={6.75in, 9in}]{geometry}` to change the margin width.
+- Single-spaced abstract.
+- Double-spaced main text.
+- Wrapping of sentences written one per line for sane version control.
+- Helvetica font.
+- Page numbers in the upper right-hand corner.
+- No page number on the first page.
+- The LaTeX header is in a drawer so you do not have to look at it when working in Emacs.
+- Comments are now in GUIDANCE drawers that can be closed with `Shift-TAB` in org-mode to reduce clutter. The contents of these drawers are not printed on export to PDF. 
+- Running tiles to ease tracking printed copies.
 
-### latex-emacs
+## Installation
 
-See this [site](https://github.com/MooersLab/latex-emacs) for a latex-emacs configuration file.
-This configuration allows you to run Emacs with LaTeX in isolation from your main configuration.
+1. Git clone the repo `git clone https://github.com/MooersLab/manuscriptInOrg.git`.
+2. Copy main.org to your project folder.
+3. Load main.org file in Emacs via the File pulldown menu or `C-x C-f`.
+4. Edit the file to customize to your manuscript.
+5. Edit the paths to your global.bib file and your image files.
+6. Enter `C-c C-e l o` to compile and open the resulting PDF in your default PDF viewer.
 
-### snippet-latex-mode
+Compiling takes several seconds on a 2018 MacBook Pro with 32 GB of RAM. 
+Org-mode is built into recent versions of Emacs. 
+The main.org file will be compiled into the final PDF without any configuration.
+Try `emacs -Q main.org` and then enter `C-c C-e l o`. 
+The PDF will open in your default PDF viewer.
 
-See this [site](https://github.com/MooersLab/snippet-latex-mode) for a collection of yasnippet snippets for latex-mode in Emacs.
-These extend the default set.
 
-### emacs-quizzes
+## Assumptions
 
-Improve your recall of Emacs commands in a few minutes a day, thanks to spaced repetition.
-The [site](https://github.com/MooersLab/qemacs) has a set of fill-in-the-blank quizzes.
+1. LaTeX is installed with all of the required style files. However, my installation was missing the **break cities.sty** file. I installed this with the `sudo port install texlive-bibtex-extra` command.
+2. You will use the LaTeX cite command and let LaTeX handle the generation of the literature cited section. This package *citar*, *helm-bibtex*, *ivy-bibtex*, or the like can help find the right citekey from inside Emacs.
+3. You can edit org-mode files in other text editors. Many text editors support syntax highlighting for org-mode. VS Code has a package that provides additional support. To get the most out of utilizing org-mode, it is best to utilize it inside of Emacs. Org-mode is now built into GNU Emacs. You can utilize org-mode without any configuration of the `init.el` file. You can achieve the same effect by starting your current Emacs with the `-Q` flag, which skips reading your `init.el` file. The editing and building of a `init.el` file to extend the features of Emacs can be an activity trap. Frustration associated with errors late during the editing of this file led to Emacs having a reputation for being difficult to master.
 
-### LaTeX in Emacs
+## Postscript Oct 10, 2022
+My approach was developed independently of another [solution](https://github.com/fangohr/template-latex-paper-from-orgmode/issues/4) found here. 
 
-Learn how to use [LaTeX in Emacs](https://github.com/MooersLab/BerlinEmacsAugust2022) by watching the slides I presented at the Berlin Emacs Meetup on 31 August 2022.
-This talk was not recorded.
+## Postscript May 16, 2023
+I had upgraded my operating system to Ventura, but I had not properly migrated my MacPorts. I found that I was missing the breakcities.sty file.
 
-### GhostText
+## Postscript October 11, 2024
 
-Edit text areas in a web browser from your [favorite text editor](https://github.com/MooersLab/DSW22ghosttext).
-The text area can be the opened tex file on Overleaf.
-This talk was recorded: See the corresponding [video](https://mediasite.ouhsc.edu/Mediasite/Channel/python/watch/4da0872f028c4255ae12935655e911321d).
+I often print manuscirpts before traveling to edit them while airborne.
+The papers tend to get mixed up between projects.
+I added a header that clarifyting which project a page belongs to.
 
-### The Writer's Law
+## Related sites
 
-Some [guidelines](https://github.com/MooersLab/thewriterslaw) to productive writing.
+- [Writing log template in Org-mode](https://github.com/MooersLab/writingLogTemplateInOrg)
+- [Writing log template in LaTeX](https://github.com/MooersLab/writingLogTemplate)
+- [LaTeX manuscript template](https://github.com/MooersLab/manuscriptInLaTeX/edit/main/README.md)
+- [Org-mode manuscript template](https://github.com/MooersLab/manuscriptInOrg/edit/main/README.md)
+- [Workbook for 2022 for tracking time spent and words written by project](https://github.com/MooersLab/writingProgress2022)
+- [Slideshow template in LaTeX](https://github.com/MooersLab/slideshowTemplateLaTeX)
+- [Annotated bibliography Template in LaTeX](https://github.com/MooersLab/annotatedBibliography)
+- [Diary for 2022 in LaTeX](https://github.com/MooersLab/diary2022inLaTeX)
+- [Diary for 2023 in LaTeX](https://github.com/MooersLab/diary2023inLaTeX)
+- [latex-emacs profile](https://github.com/MooersLab/latex-emacs)
+- [default Emacs profile](https://github.com/MooersLab/configorg)
+- [snippets for latex-mode in Emacs](https://github.com/MooersLab/snippet-latex-mode)
+- [Quizzes about Emacs to improve recall of keybindings](https://github.com/MooersLab/qemacs)
+- [Slides from talk about GhostText, Data Science Workshop, July 2022](https://github.com/MooersLab/DSW22ghosttext)
+- [Video link to talk about GhostText, Data Science Workshop, July 2022](https://mediasite.ouhsc.edu/Mediasite/Channel/python/watch/4da0872f028c4255ae12935655e911321d)
+- [The writer's law](https://github.com/MooersLab/thewriterslaw)
 
-## Version History
+Note that [latex-emacs profile](https://github.com/MooersLab/latex-emacs) has functions for converting LaTex lists into org-markdown lists.
 
-|Version      | Changes                                                                              | Date            |
-|:------------|:-------------------------------------------------------------------------------------|:----------------|
-| Version 0.2 | Added update table to README.md                                                      | 2024 April 7    |
-| Version 0.3 | Updated main.tex to include running titles and support the use of the package minted.| 2024 October 5  |
 
-## Sources of Funding
+## Update history
+
+|Version      | Changes                                                                                                                                                   | Date                        |
+|:-----------|:------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------|
+| Version 0.2 |   Added badges, funding, and update table.                                                                                            | 2024 May 21          |
+| Version 0.3 |   Updated main.org so it can compile without configuration from an init.el file.                                       | 2024 August 18      |
+| Version 0.4 |   Fixed issues with preamble. Put comments in drawers.                                                                       | 2024 August 22       |
+| Version 0.5 |   Put preamble in a drawer.                                                                                                                     | 2024 August 26       |
+| Version 0.6 |   Put GUIDANCE drawers under subheadings with noexport tag.                                                         | 2024 August 26        |
+| Version 0.7 |  Add urlx package to allow linebreaks in urls.                                                                                        | 2024 August 27        |
+| Version 0.7.1 | Added short author list, running title, and page of N pages format to header                                    | 2024 October 11       |
+## Sources of funding
 
 - NIH: R01 CA242845
 - NIH: R01 AI088011
 - NIH: P30 CA225520 (PI: R. Mannel)
-- NIH P20GM103640 and P30GM145423 (PI: A. West)
+- NIH: P20 GM103640 and P30 GM145423 (PI: A. West)
 
