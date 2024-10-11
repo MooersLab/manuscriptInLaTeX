@@ -1,0 +1,393 @@
+#+TITLE: Generic Manuscript Template
+#+Author: Blaine Mooers
+#+Options: title:nil toc:nil author:nil \n:nil num:nil
+#+STARTUP: noindent overview
+#+cite_export: natbib cell
+#+bibliography: ~/Documents/global.bib
+:PREAMBLE:
+#+LaTeX_CLASS: article
+#+LaTeX_CLASS_OPTIONS: [11pt,letterpaper]
+#+LaTeX_HEADER:\usepackage[letterpaper, total={6.75in, 9in}]{geometry} % good with line numbers
+
+#+LaTeX_HEADER:\usepackage{fancyhdr,lipsum} % conflicts with \pagestyle{myheading}
+#+LaTeX_HEADER:\pagestyle{fancy}
+#+LaTeX_HEADER:\usepackage{lastpage}
+#+LaTeX_HEADER:\fancyhf{}% Clear header/footer
+#+LaTeX_HEADER:\fancyhead[L]{Student, ..., and Mooers}
+#+LaTeX_HEADER:\fancyhead[C]{Manuscript template in Org}
+#+LaTeX_HEADER:\fancyhead[R]{\thepage\ / \pageref{LastPage}} 
+#+LaTeX_HEADER:\renewcommand{\headrulewidth}{1pt} % set to 0pt to hide headrule
+
+# #+LaTeX_HEADER:\fancyhead[C]{%
+# #+LaTeX_HEADER:  \ifodd\value{page}\relax
+# #+LaTeX_HEADER:    Generic manuscript template in Org % Odd page header
+# #+LaTeX_HEADER:  \else
+# #+LaTeX_HEADER:    Student, ..., and Mooers % Even page header
+# #+LaTeX_HEADER:  \fi}
+# #+LaTeX_HEADER:\fancyhead[R]{\thepage} % insert page number on right side of header. 
+
+
+#+LaTeX_HEADER:\usepackage{minted}
+#+LaTeX_HEADER:\usepackage{booktabs}
+#+LaTeX_HEADER:\usepackage{graphicx}
+#+LaTeX_HEADER:\usepackage{xurl} % permit line breaks in urls
+#+LaTeX_HEADER:\usepackage{hyperref,lineno}
+#+LaTeX_HEADER:\usepackage{datetime2}
+#+LaTeX_HEADER:\usepackage{amsmath,amssymb,amsfonts}
+#+LaTeX_HEADER:\usepackage{breakcites} % allow citatation to wrap
+
+#+LaTeX_HEADER:\usepackage[utf8]{inputenc}
+#+LaTeX_HEADER:\usepackage{setspace} \doublespacing
+#+LaTeX_HEADER:\doublespacing % turn on doublespacing for the whole document.
+#+LATEX_HEADER:\usepackage{parskip} % add a blank line between paragraphs upon export to PDF.
+#+LaTeX_HEADER:\usepackage[T1]{fontenc}
+#+LaTeX_HEADER:\usepackage{authblk}
+#+LaTeX_HEADER:\usepackage[labelfont=bf]{caption}
+
+#+LaTeX_HEADER:\DeclareCaptionType{equ}[][]
+#+LaTeX_HEADER:% Create a code float environment to enclosed minted environments so that captions can be added to code listings.
+#+LaTeX_HEADER:\newenvironment{code}{\captionsetup{type=listing}}{}
+#+LaTeX_HEADER:% Approximate Arial font. To save ink by returning to a sans serif font, comment the next two lines.
+#+LaTeX_HEADER:\usepackage{helvet}
+#+LaTeX_HEADER:\renewcommand{\familydefault}{\sfdefault}
+#+LaTeX_HEADER:\modulolinenumbers[1]
+#+LaTeX_HEADER:\setlength{\parindent}{0pt} % Remove automatic indent of paragraphs.
+
+#+LaTeX:\author[1]{Graduate Student}
+#+LaTeX:\author[2]{Senior Collaborator}
+#+LaTeX:\author[3]{Staff Scientist}
+#+LaTeX:\author[1,2,3]{Blaine Mooers\thanks{blaine-mooers at ouhsc.edu, phone: 405-271-8XXX, FAX: 405-271-3X3X}}
+#+LaTeX:\affil[1]{Department of Biochemistry and Molecular Biology, University of Oklahoma Health Sciences Center, Oklahoma City, Oklahoma, United States 73104}
+#+LaTeX:\affil[2]{Stephenson Cancer Center, University of Oklahoma Health Sciences Center, Oklahoma City, Oklahoma, United States 73104}
+#+LaTeX:\affil[3]{Laboratory of Biomolecular Structure and Function, University of Oklahoma Health Sciences Center, Oklahoma City, Oklahoma, United States 73104}
+#+LATEX:\title{Generic Manuscript Template}
+#+LATEX:\thispagestyle{plain}
+#+LATEX:\maketitle
+#+LATEX:\pagenumbering{gobble} % remove page number
+#+LATEX:\newpage
+#+LATEX:\pagenumbering{arabic}
+#+LATEX:\linenumbers
+:END:
+
+
+** abtract guidance                                                :noexport:
+:GUIDANCE:
+I draft the abstract after defining the scope of the paper with the Introduction and outlining the key results in the Results section and maybe the Discussion section.
+I usually rewrite the abstract after the first draft is finished.
+The abstract is often single-spaced.
+I enclosed the abstract in the *singlespace* environment.
+:END:
+
+#+LATEX:\begin{singlespace}
+#+LATEX:\section*{Abstract}
+
+
+#+LATEX:\end{singlespace}
+
+** keyword guidance                                                :noexport:
+:GUIDANCE:
+The paragraph enviornment in LaTeX does not have a native analog in org.
+However, org will implement the paragraph command on export to PDF.
+:END:
+
+\paragraph{ Keywords:} I draft the keywords in the writing document and select the best up to the allowable limit.
+
+\paragraph{Abbreviations:} GUI: graphical user interface, IDE: integrated development environment
+
+
+
+* Introduction
+:PROPERTIES:
+:CUSTOM_ID: sec:introduction
+:END:
+** introduction guidance                                           :noexport:
+:GUIDNACE:
+The Introduction is not a literature review.
+That is a separate class manuscript.
+
+The first paragraph defines the scope of the problem and why it is important.
+It might cite several key contributions in the area \cite{Acharya2011SolvingProbabilisticProgrammingProblemsInvolvingMultiChoiceParameters, Luft2007EfficientOptimizationOfCrystallizationConditionsByManipulationOfDropVolumeRatioAndTemperature}.
+I like to use the author-year format to make it easier for reviewers, regardless of the required format.
+Numbered formats are harder to lookup.
+The last sentence should set up the first sentence of the next paragraph by hinting at possible approaches to the question or problem at hand.
+
+The second paragraph starts with the central hypothesis that addressed the question or problem alluded to in paragraph one.
+This is followed by a summary of our approach.
+A sentence or two may be expended on a summary of what we found.
+The last sentence describes the audience of the article.
+:END:
+
+** Nonsense text
+
+Test my patience!
+
+#+LATEX:\lipsum[1-10]
+
+
+* Materials and Methods
+:PROPERTIES:
+:CUSTOM_ID: sec:methods
+:END:
+** methods guidance                                                :noexport:
+
+:GUIDANCE:
+This section is a series of subsections that may or may not be in chronological order.
+This section is often placed after the Discussion section.
+:END:
+
+* Results
+:PROPERTIES:
+:CUSTOM_ID: sec:results
+:END:
+** results guidance                                                :noexport:
+:Guidnace:
+Paragraph One: Map of the Results section.
+This introductory paragraph is usually missing, but no editor has ever asked me to delete it.
+This paragraph tells the reader in a little more detail than the Introduction what they can expect to see and the order in which the results will be presented.
+:END:
+
+** Most important result
+*** most important result guidance                                 :noexport:
+:GUIDNACE:
+Cover the results in decreasing importance relative to the degree to which they address the central hypothesis of the paper.
+If they have no relevance, save them from another paper.
+Chronological order is usually a poor choice.
+End each paragraph with a conclusion.
+
+Refer to tables and figures via their labels.
+For example, see the hot figure (Fig. \ref{fig:labelA}).
+The numbering of the figures is handled automatically, so you can reorganize them without having to renumber them.
+:END:
+
+
+** Second most important result
+*** guidance second most important result                          :noexport:
+:GUIDNACE:
+See hot numbers in (Table \ref{tab:first}).
+The numbering of the tables is handled automatically, so you can reorganize them without having to renumber them.
+:END:
+
+
+** Third most important result
+*** guidance third most important result                           :noexport:
+:GUIDNACE:
+Inline equations are placed between dollar signs: $y = mx + b$.
+Display equations are placed between double-dollar signs or inside an equation environment.
+These environments are not floats.
+You can define a custom float to enclose them and place them inside the float to enable the use of captions as I did below.
+The \emph{equ} environment is defined in the preamble.
+
+
+\begin\begin{equ}[htp]
+\begin{equation}
+i \hbar \frac{d}{d t}|\Psi(t)\rangle=\hat{H}|\Psi(t)\rangle
+\end{equation}
+\caption{Eq. \label{Eq:first}Schrodinger's time-dependent wave equation.}
+\end{equ}
+:END:
+
+
+
+** Fourth most important result
+*** guidance fourth most important result                          :noexport:
+:GUIDNACE:
+Code listings also have to be enclosed inside floats to have captions.
+The caption can be placed above or below the code listing.
+
+These environments need to be enclosed in the singlespace environment to retain single-line spacing in the code block.
+
+The minted package provides the syntax highlighting.
+The \mintinline{bash}{-shell-escape} must be used on compiling.
+:END:
+
+
+#+LaTeX:\begin{singlespace}
+#+LaTeX:% Line numbering on and aligned with left margin.
+#+LaTeX:\begin{code}{}
+#+LaTeX:  \index{openCV!measureSizes}
+#+LaTeX:  \label{lst:measureSize}
+#+LaTeX:\begin{minted}[frame=lines,
+#+LaTeX:               framerule=2pt,
+#+LaTeX:               linenos=true,
+#+LaTeX:               xleftmargin=\parindent,
+#+LaTeX:               breaklines]{python}
+#+LaTeX:# import the necessary packages
+#+LaTeX:from scipy.spatial import distance as dist
+#+LaTeX:from imutils import perspective
+#+LaTeX:from imutils import contours
+#+LaTeX:import numpy as np
+#+LaTeX:import argparse
+#+LaTeX:import imutils
+#+LaTeX:import cv2
+#+LaTeX:
+#+LaTeX:def midpoint(ptA, ptB):
+#+LaTeX:    return ((ptA[0] + ptB[0]) * 0.5, (ptA[1] + ptB[1]) * 0.5)
+#+LaTeX:\end{minted}
+#+LaTeX:\caption{\label{lst:size}Contents of measureSizes.py.}
+#+LaTeX:\end{code}
+#+LaTeX:\end{singlespace}
+
+
+
+** Fifth most important result
+
+
+
+** Sixth most important result
+*** guidance sixth most important result                           :noexport:
+:GUIDNACE:
+There could be up to four more subsections in a results-heavy paper.
+
+There are usually four graphics and two tables in a minimal publishable unit.
+This is a weak guideline because of the trend to use multipanel figures.
+I have seen figures with ten panels.
+Is this one figure or ten?
+
+Delete all results that do not address the central hypothesis or are less important.
+:END:
+
+
+#+LATEX:\lipsum[1-20]
+
+** Nonsense text
+#+LATEX:\lipsum[1-10]
+
+#+LATEX:\begin{singlespace}
+#+LATEX:% Line numbering on and aligned with left margin.
+#+LATEX:\begin{code}{}
+#+LATEX:  \index{openCV!measureSizes}
+#+LATEX:  \label{lst:measureSize}
+#+LATEX:\begin{minted}[frame=lines,
+#+LATEX:               framerule=2pt,
+#+LATEX:               linenos=true,
+#+LATEX:               xleftmargin=\parindent,
+#+LATEX:               breaklines]{python}
+#+LATEX:# import the necessary packages
+#+LATEX:from scipy.spatial import distance as dist
+#+LATEX:from imutils import perspective
+#+LATEX:from imutils import contours
+#+LATEX:import numpy as np
+#+LATEX:import argparse
+#+LATEX:import imutils
+#+LATEX:import cv2
+#+LATEX:
+#+LATEX:def midpoint(ptA, ptB):
+#+LATEX:    return ((ptA[0] + ptB[0]) * 0.5, (ptA[1] + ptB[1]) * 0.5)
+#+LATEX:
+#+LATEX:\end{minted}
+#+LATEX:\caption{Contents of measure.py. \label{lst:measureSize}}
+#+LATEX:\end{code}
+#+LATEX:\end{singlespace}
+#+LaTeX_HEADER:\usepackage{setspace} \doublespacing
+
+* Discussion
+:PROPERTIES:
+:CUSTOM_ID: sec:discussion
+:END:
+** discussion guidance                                             :noexport:
+:GUIDNACE:
+How our results relate to the results of others.
+(Avoid using merged Results and Discussion sections.
+They rarely work well.
+This is a research paper, not a seminar).
+
+Paragraph One: Map of the Discussion section.
+This paragraph is usually missing, but it can orient the reader.
+
+Paragraphs two and beyond must end with conclusions in their last sentences.
+The conclusion can be a call to do more research.
+
+Lay out the topics in declining importance.
+
+Delete the paragraph with no bearing on the central hypothesis.
+:END:
+
+** Nonsense text
+#+LATEX:\lipsum[1-10]
+
+
+* Acknowledgments
+:PROPERTIES:
+:CUSTOM_ID: sec:acknowledgments
+:END:
+
+** acknolwedgements guidance                                       :noexport:
+:GUIDNACE:
+Acknowledgments of core facilities and grant support.
+Double-check the grant numbers.
+It is easy to make typos in thdese.
+These acknowledgments are critical to the continued support of grants.
+:END:
+
+** Bibliography                                                    :noexport:
+** 
+#+Latex:\newpage
+#+print_bibliography:
+
+** List of Tables                                                  :noexport:
+** 
+#+LaTeX:\newpage
+#+LaTeX:\listoftables
+
+
+** tables guidance                                                 :noexport:
+:GUIDANCE:
+Tables should be one per page.
+
+The manual assembly of tables is a challenge for beginners.
+Pandas, R, and the Python package latextable \url{https://github.com/JAEarly/latextable} can write out LaTeX tables.
+Tables are easy to assemble in org-mode in Emacs and exported to LaTeX.
+Markdown tables can be exported to LaTeX with pandoc.
+There are online tools to aid in the assembly of LaTeX tables: \url{https://www.tablesgenerator.com/}.
+
+The first table below was made with vanilla LaTeX.
+The second table was made with the booktabs package: The horizontal rules are of different weights in the latter table.
+
+There is a \emph{longtable} package for supporting tables that span more than one page.
+It is also possible to have tables oriented in the landscape orientation via the \emph{lscape} package.
+
+#+LaTeX:\newpage
+
+\begin{table}[htp]
+  \centering
+  \caption{\label{tab:first} My summary statistics in the default LaTeX table. Dummy data.}
+\begin{tabular}{lllll}\hline
+ Parameter & Group A & Group B & Group C &  Group D \\ \hline
+ Length ($\mu$m) & 100 & 150 & 175 &  250\\
+ Weight (ng)  &  10 &  50 & 40  &  50\\
+ Density (g/m) & 0.01  & 0.03  &  0.09 &  0.77\\ \hline
+\end{tabular}
+\end{table}
+
+
+#+LaTeX:\newpage
+
+
+\begin{table}[htp]
+  \centering
+  \caption{\label{tab:second} My summary statistics made with the booktabs package. Dummy data.}
+\begin{tabular}{lllll}\toprule % l c and r control the alignment f the text in the table fields
+ Parameter & Group A & Group B & Group C &  Group D \\ \midrule
+ Length ($\mu$m) & 100 & 150 & 175 &  250\\
+ Weight (ng)  &  10 &  50 & 40  &  50\\
+ Density (g/m) & 0.01  & 0.03  &  0.09 &  0.77\\ \bottomrule
+\end{tabular}
+\end{table}
+:END:
+
+
+#+LaTeX:\newpage
+#+LaTeX:\listoffigures
+** guidance list of figures                                        :noexport:
+:GUIDANCE:
+One figure per page.
+:END:
+
+#+LaTeX:\newpage
+
+\begin{figure}[htp]
+  \begin{center}
+  \includegraphics[width=3.25in]{./figs/wcPlot}
+  \caption{\label{fig:labelA} This beautiful graph relates X to Y. }
+  \end{center}
+\end{figure}
