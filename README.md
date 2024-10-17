@@ -39,8 +39,8 @@ Delete the boilerplate that you do not need and fill out the sections with your 
 
 ## Second page
 
+![SecondPageUpdated](https://github.com/user-attachments/assets/cbcc19e5-f096-4a9b-9590-6cd280e24d5a)
 
-![Screenshot 2024-10-11 at 1 52 24 PM](https://github.com/user-attachments/assets/f2776d04-c022-48e8-9e47-d3a3ddd616e0)
 
 
 ## Compiling in terminal
